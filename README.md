@@ -52,22 +52,32 @@ Steps for a Secure Handshake Using RSA
 
 ## Message Requirements
 
-In the context of the "handshake" challenge involving the exchange of signed messages, the content of these messages must meet certain requirements to ensure secure and verifiable communication. These requirements include:
+In the context of the "handshake" challenge involving the exchange of signed messages, 
+the content of these messages must meet certain requirements to ensure secure and verifiable communication. 
+These requirements include:
 
     Non-Predictability:
-        The content should not be easily predictable or guessable. This helps to prevent replay attacks, where an attacker could intercept a message and send it again to impersonate the sender.
+        The content should not be easily predictable or guessable. This helps to prevent replay attacks, 
+        where an attacker could intercept a message and send it again to impersonate the sender.
 
     Uniqueness:
-        Each message should include a unique identifier, such as a timestamp, nonce (number used once), or sequence number, to distinguish it from other messages. This helps to ensure that each message is unique and cannot be reused by an attacker.
+        Each message should include a unique identifier, such as a timestamp, nonce (number used once), 
+        or sequence number, to distinguish it from other messages. This helps to ensure that each message 
+        is unique and cannot be reused by an attacker.
 
     Relevance and Completeness:
-        The message should contain all the necessary information required for the handshake process. This might include the sender's identity, the purpose of the message, and any other relevant data.
+        The message should contain all the necessary information required for the handshake process. 
+        This might include the sender's identity, the purpose of the message, and any other relevant data.
 
     Integrity:
-        The message content must remain unchanged from the time it is signed until the recipient verifies it. Any alteration should be detectable through the verification process.
+        The message content must remain unchanged from the time it is signed until the recipient verifies it. 
+        Any alteration should be detectable through the verification process.
 
     Format:
-        The message should be formatted in a way both parties have agreed upon, ensuring it can be properly interpreted and verified.
+        The message should be formatted in a way both parties have agreed upon, 
+        ensuring it can be properly interpreted and verified.
 
     Confidentiality (Optional):
-        If the content is sensitive, it should be encrypted to ensure that only the intended recipient can read it. This is optional depending on the specific requirements of the handshake challenge.
+        If the content is sensitive, it should be encrypted to ensure that only the intended recipient can read it. 
+        This is optional depending on the specific requirements of the handshake challenge.
+        
