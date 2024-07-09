@@ -1,6 +1,7 @@
 from cryptography.hazmat.primitives.asymmetric import rsa, padding
 from cryptography.hazmat.primitives import hashes, serialization
 
+
 # Function to generate RSA keys
 def generate_keys():
     private_key = rsa.generate_private_key(
@@ -9,6 +10,7 @@ def generate_keys():
     )
     public_key = private_key.public_key()
     return public_key, private_key
+
 
 # Function to sign a message
 def sign_message(message, private_key):
@@ -22,6 +24,7 @@ def sign_message(message, private_key):
         hashes.SHA256()
     )
     return signature
+
 
 # Function to verify a message
 def verify_message(message, signature, public_key):
@@ -39,6 +42,7 @@ def verify_message(message, signature, public_key):
         return True
     except Exception as e:
         return False
+
 
 # Generate RSA keys for Alice and Bob
 alice_public_key, alice_private_key = generate_keys()
